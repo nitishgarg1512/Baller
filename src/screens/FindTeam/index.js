@@ -84,7 +84,7 @@ class Findteam extends Component {
   }
   
   onChangeTeamName(text) {
-   
+    
   }
   
   onTapTeam(index) {
@@ -120,7 +120,10 @@ class Findteam extends Component {
   )
   
   }
-
+  onTapPlayForthisTeam() {
+    const { navigate } = this.props.navigation;
+    navigate({ routeName: 'NewTeam' })
+  }
   
   render() {
     return (
@@ -129,6 +132,7 @@ class Findteam extends Component {
         teamName = {this.state.teamName} 
         selectedIndex = {this.state.selectedIndex} 
         onChangeTeamName = {(text) => this.onChangeTeamName(text)}
+        onTapPlayForthisTeam = {() => this.onTapPlayForthisTeam()}
         onTapTeam = {(index) => this.onTapTeam(index)}
       />
     );

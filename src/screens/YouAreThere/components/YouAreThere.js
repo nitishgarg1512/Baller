@@ -17,60 +17,20 @@ const { width, height } = Dimensions.get('window');
 
 const Login = props => (
   <View style={styles.container}>
-    <Image style={{width,height, position: 'absolute'}} source={Images.bg1}/>
     <View style={styles.centerContainer}>
       <View style={styles.signInHeader}>
+        <Text style={styles.welcomeText}>{'YO\'RE ALMOST THERE!'}</Text>
         <Image style={{width:100, height:100, resizeMode: 'contain'}} source={Images.ballerLogo}/>
-        <Text style={styles.welcomeText}>{'Welcome to BallerProfile'}</Text>
-        <Text style={styles.subtitleText}>{'The hottest talent outside of pro sports!'}</Text>
-      </View>
-      <View style={styles.userDetailscontainer}>
-        <TextInput
-            style={[ styles.input, {borderColor : props.t1Color} ]}
-            placeholder={'Baller Email'}
-            onChangeText={(text) => { props.onChangeFirstText(text); }}
-            value={props.username}
-            onFocus = {()=> {
-              props.onfocusFistText()
-            }}
-            underlineColorAndroid="transparent"
-        />
-        <TextInput
-            style={[ styles.input, {borderColor : props.t2Color} ]}
-            placeholder={'Baller Password'}
-            secureTextEntry={true}
-            onChangeText={(text) => { props.onChangeSecondText(text); }}
-            value={props.password}
-            onFocus = {()=> {
-              props.onfocusSecondText()
-            }}
-            underlineColorAndroid="transparent"
-        />
-        <TouchableOpacity  onPress={() => { props.onSignInButtonClick(); }}>
+        <Text style={styles.welcomeText}>{'The AFTV FC team captain and team admins have been notified.. They will add you to the squad as soon as possible!'}</Text>
+        <TouchableOpacity  onPress={() => {  }}>
           <View style={{marginTop: 5, height: 40, width: width-44, backgroundColor: Colors.appRed ,alignItems: 'center', justifyContent: 'center'}}>
             <Text style={styles.loginButtonText}>
-              {'Log in'}
+              {'Done'}
             </Text>
           </View>
         </TouchableOpacity>
       </View>
-      <View style={{padding: 40, flex:1,backgroundColor: 'rgba(0,0,0,0)', alignItems: 'center', justifyContent: 'flex-start'}}>
-        <Text style={{color: 'lightgrey', fontSize: 14, fontWeight: '600'}}>Don't have baller profile yet?</Text>
-        <TouchableOpacity  onPress={() => {  props.onSignUpButtonClick(); }}>
-            <View style={{marginTop: 30, height: 40, width: width-44, backgroundColor: 'rgb(12,90,178)' ,alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={styles.loginButtonText}>
-                {'Sign Up ASAP'}
-              </Text>
-            </View>
-        </TouchableOpacity>
-        <TouchableOpacity  onPress={() => {  props.onForgotPasswordButtonClick(); }}>
-            <View style={{marginTop: 30, height: 40, width: width-44 ,alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={styles.forgotButtonText}>
-                {'Forgot your password ?'}
-              </Text>
-            </View>
-        </TouchableOpacity>
-      </View>
+      
     </View>
   </View>
 );
@@ -95,7 +55,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width,
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
   },
   userDetailscontainer: {
     flex:0.7,

@@ -49,7 +49,7 @@ const Welcome = props => (
             </View>
         </TouchableOpacity>
         <TouchableOpacity onPress={()=>{
-                props.onTappedCreateFantasyTeam()
+                props.onCreateFantasy()
             }}>
               <View style={{backgroundColor:'white',height: 40,marginBottom:15 , width: width-40, alignItems: 'center', justifyContent: 'center'}}>
               <Text style={{color: 'black', fontStyle:'italic', fontWeight: '900'}}>CREATE A FANTASY TEAM</Text>

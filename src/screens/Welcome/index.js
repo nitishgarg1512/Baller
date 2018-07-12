@@ -24,30 +24,14 @@ const {width,height} = Dimensions.get('window')
 
 export default class Welcome extends Component {
 
-  static navigationOptions = {
-    title: 'Sign In',
-  };
-
-  constructor() {
-    super();
-    this.state = {
-     
-    };
-  }
-
-  componentWillReceiveProps(nextProps) {
-  }
-  
-  onTappedCreateFantasyTeam() {
+  onCreateFantasy() {
     const { navigate } = this.props.navigation;
     navigate({ routeName: 'Findteam' })
-   }
-
-
+  }
   render() {
     return (
      <WelcomeView 
-       onTappedCreateFantasyTeam = {()=> {this.onTappedCreateFantasyTeam()}}
+       onCreateFantasy={()=>{this.onCreateFantasy()}}
      />
     );
   }

@@ -76,7 +76,7 @@ const FindTeam = props => (
 
     {
       (props.selectedIndex != -1) && <View style={{ flex : 1, alignItems: 'center', justifyContent: 'center'}}>
-      <TouchableOpacity  onPress={() => {  }}>
+      <TouchableOpacity  onPress={() => { props.onTapPlayForthisTeam() }}>
         <View style={{marginTop: 5, height: 40, width: width-44, backgroundColor: 'black' ,alignItems: 'center', justifyContent: 'center'}}>
           <Text style={styles.loginButtonText}>
             {'I PLAY FOR THIS TEAM'}

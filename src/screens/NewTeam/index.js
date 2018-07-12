@@ -5,12 +5,12 @@
  */
 
 import React, { Component } from 'react';
-import LoginView from './components/Login';
+import NewteamView from './components/NewTeam';
 
 import { NavigationActions } from 'react-navigation';
 import Colors from '../../utility/Colors'
 
-class Login extends Component {
+class Newteam extends Component {
 
   static navigationOptions = {
     title: 'Sign In',
@@ -77,7 +77,7 @@ class Login extends Component {
   
   render() {
     return (
-      <LoginView
+      <NewteamView
         t1Color = {this.state.t1Color} 
         t2Color = {this.state.t2Color} 
         userName= {this.state.userName}
@@ -95,4 +95,4 @@ class Login extends Component {
 }
 
 
-export default Login;
+export default Newteam;

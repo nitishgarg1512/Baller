@@ -9,6 +9,7 @@ import {
   TextInput,
   Image,
 } from 'react-native';
+import BoxInput from '../../../components/BoxTextInput/index';
 import Images from '../../../assets/index';
 
 const { width, height } = Dimensions.get('window');
@@ -45,13 +46,13 @@ const SignUp = props => (
             underlineColorAndroid="transparent"
         />
         <TextInput
-            style={[ styles.input, {borderColor : props.tColor} ]}
+            style={[ styles.input, {borderColor : props.t3Color} ]}
             placeholder={'Confirm Password'}
             secureTextEntry={true}
             onChangeText={(text) => { props.onChangeThirdText(text); }}
             value={props.password}
             onFocus = {()=> {
-              props.onfocusSecondText()
+              props.onfocusThirdText()
             }}
             underlineColorAndroid="transparent"
         />

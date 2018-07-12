@@ -15,63 +15,31 @@ import Colors from '../../../utility/Colors'
 
 const { width, height } = Dimensions.get('window');
 
-const Login = props => (
+const NewTeam = props => (
   <View style={styles.container}>
-    <Image style={{width,height, position: 'absolute'}} source={Images.bg1}/>
-    <View style={styles.centerContainer}>
+      <Text style={styles.welcomeText}>{'NEWTEAM UNITED'}</Text>
       <View style={styles.signInHeader}>
         <Image style={{width:100, height:100, resizeMode: 'contain'}} source={Images.ballerLogo}/>
         <Text style={styles.welcomeText}>{'Welcome to BallerProfile'}</Text>
         <Text style={styles.subtitleText}>{'The hottest talent outside of pro sports!'}</Text>
       </View>
       <View style={styles.userDetailscontainer}>
-        <TextInput
-            style={[ styles.input, {borderColor : props.t1Color} ]}
-            placeholder={'Baller Email'}
-            onChangeText={(text) => { props.onChangeFirstText(text); }}
-            value={props.username}
-            onFocus = {()=> {
-              props.onfocusFistText()
-            }}
-            underlineColorAndroid="transparent"
-        />
-        <TextInput
-            style={[ styles.input, {borderColor : props.t2Color} ]}
-            placeholder={'Baller Password'}
-            secureTextEntry={true}
-            onChangeText={(text) => { props.onChangeSecondText(text); }}
-            value={props.password}
-            onFocus = {()=> {
-              props.onfocusSecondText()
-            }}
-            underlineColorAndroid="transparent"
-        />
-        <TouchableOpacity  onPress={() => { props.onSignInButtonClick(); }}>
-          <View style={{marginTop: 5, height: 40, width: width-44, backgroundColor: Colors.appRed ,alignItems: 'center', justifyContent: 'center'}}>
-            <Text style={styles.loginButtonText}>
-              {'Log in'}
-            </Text>
-          </View>
-        </TouchableOpacity>
-      </View>
-      <View style={{padding: 40, flex:1,backgroundColor: 'rgba(0,0,0,0)', alignItems: 'center', justifyContent: 'flex-start'}}>
-        <Text style={{color: 'lightgrey', fontSize: 14, fontWeight: '600'}}>Don't have baller profile yet?</Text>
-        <TouchableOpacity  onPress={() => {  props.onSignUpButtonClick(); }}>
-            <View style={{marginTop: 30, height: 40, width: width-44, backgroundColor: 'rgb(12,90,178)' ,alignItems: 'center', justifyContent: 'center'}}>
+         <TouchableOpacity  onPress={() => { props.onSignInButtonClick(); }}>
+            <View style={{marginTop: 5, height: 40, width: width-44, backgroundColor: Colors.appRed ,alignItems: 'center', justifyContent: 'center'}}>
               <Text style={styles.loginButtonText}>
-                {'Sign Up ASAP'}
+                {'INVITE BALLERS'}
               </Text>
             </View>
-        </TouchableOpacity>
-        <TouchableOpacity  onPress={() => {  props.onForgotPasswordButtonClick(); }}>
-            <View style={{marginTop: 30, height: 40, width: width-44 ,alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={styles.forgotButtonText}>
-                {'Forgot your password ?'}
+          </TouchableOpacity>
+          <Text style={styles.welcomeText}>{'Welcome to BallerProfile'}</Text>
+          <TouchableOpacity  onPress={() => { props.onSignInButtonClick(); }}>
+            <View style={{marginTop: 5, height: 40, width: width-44, backgroundColor: Colors.appRed ,alignItems: 'center', justifyContent: 'center'}}>
+              <Text style={styles.loginButtonText}>
+                {'Log in'}
               </Text>
             </View>
-        </TouchableOpacity>
+          </TouchableOpacity>
       </View>
-    </View>
   </View>
 );
 
@@ -147,4 +115,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Login;
+export default NewTeam;
