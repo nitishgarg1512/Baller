@@ -19,23 +19,23 @@ const NewTeam = props => (
   <View style={styles.container}>
       <Text style={styles.welcomeText}>{'NEWTEAM UNITED'}</Text>
       <View style={styles.signInHeader}>
-        <Image style={{width:100, height:100, resizeMode: 'contain'}} source={Images.ballerLogo}/>
-        <Text style={styles.welcomeText}>{'Welcome to BallerProfile'}</Text>
-        <Text style={styles.subtitleText}>{'The hottest talent outside of pro sports!'}</Text>
+        <Image style={{width:150, height:150, resizeMode: 'contain'}} source={Images.ballerLogo}/>
+        <Text style={styles.congratsText}>{'Congrats Dimitri,'}</Text>
+        <Text style={styles.subtitleText}>{'You are now Captain and Admin of Newteam United!'}</Text>
       </View>
       <View style={styles.userDetailscontainer}>
          <TouchableOpacity  onPress={() => { props.onSignInButtonClick(); }}>
-            <View style={{marginTop: 5, height: 40, width: width-44, backgroundColor: Colors.appRed ,alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={styles.loginButtonText}>
+            <View style={{marginTop: 5, height: 50, width: 200,borderRadius: 25, backgroundColor: 'black' ,alignItems: 'center', justifyContent: 'center'}}>
+              <Text style={styles.buttonText}>
                 {'INVITE BALLERS'}
               </Text>
             </View>
           </TouchableOpacity>
-          <Text style={styles.welcomeText}>{'Welcome to BallerProfile'}</Text>
+          <Text style={styles.subtitleText}>{'Even Mess! needs his teammates!'}</Text>
           <TouchableOpacity  onPress={() => { props.onSignInButtonClick(); }}>
-            <View style={{marginTop: 5, height: 40, width: width-44, backgroundColor: Colors.appRed ,alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={styles.loginButtonText}>
-                {'Log in'}
+            <View style={{marginTop: 5, height: 50, width, backgroundColor: 'grey' ,alignItems: 'center', justifyContent: 'center'}}>
+              <Text style={styles.buttonText}>
+                {'DONE'}
               </Text>
             </View>
           </TouchableOpacity>
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0,0,0,1)',
+    backgroundColor: 'white',
   },
   input: {
     width: width - 40,
@@ -67,18 +67,16 @@ const styles = StyleSheet.create({
   },
   userDetailscontainer: {
     flex:0.7,
-    marginLeft: 10,
-    marginRight: 10,
+    width,
     marginTop: 0,
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     alignItems: 'center',
-    // backgroundColor: 'orange'
   },
-  loginButtonText: {
+  buttonText: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 13,
-    fontWeight: '800',
+    fontSize: 15,
+    fontWeight: '500',
   },
   forgotButtonText: {
     textAlign: 'center',
@@ -90,28 +88,33 @@ const styles = StyleSheet.create({
   welcomeText: {
     textAlign: 'center',
     width,
-    color: 'white',
-    fontSize: 25,
-    padding: 10,
+    color: 'black',
+    fontSize: 27,
+    marginTop: 30,
     fontWeight: '700',
-    fontStyle:'italic',
+    fontStyle:'normal',
+  },
+  congratsText: {
+    textAlign: 'center',
+    width,
+    color: 'black',
+    fontSize: 25,
+    marginTop: 30,
+    fontWeight: '700',
+    fontStyle:'normal',
   },
   subtitleText: {
     textAlign: 'center',
-    width,
-    color: 'lightgrey',
-    fontSize: 11,
-    padding: 10,
-    fontWeight: '900',
+    color: 'black',
+    fontSize: 18,
+    margin: 35,
   },
   signInHeader: {
-    flex: 1.2,
+    flex: 1,
     width,
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     marginBottom: 10,
-    backgroundColor: 'rgba(0,0,0,0)'
-
   },
 });
 
