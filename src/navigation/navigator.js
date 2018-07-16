@@ -17,11 +17,20 @@ import SignUp from '../screens/SignUp/index';
 import Welcome from '../screens/Welcome/index';
 import Findteam from '../screens/FindTeam/index';
 import NewTeam from '../screens/NewTeam/index';
+import Landing from '../screens/Landing/index';
 
 export default BallerNavigator = StackNavigator({
      Onboarding: {
       screen: Onboarding,
       key: 'Onboarding',
+      header: null,
+      navigationOptions: {
+        header: null
+      }
+     },
+     Landing: {
+      screen: Landing,
+      key: 'Landing',
       header: null,
       navigationOptions: {
         header: null

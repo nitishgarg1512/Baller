@@ -20,12 +20,12 @@ const SignUp = props => (
     <View style={styles.centerContainer}>
       <View style={styles.signInHeader}>
         <Image style={{width:100, height:100, resizeMode: 'contain'}} source={Images.ballerLogo}/>
-        <Text style={styles.welcomeText}>{'Welcome to BallerProfile'}</Text>
+        <Text style={styles.welcomeText}>{'Create your BallerProfile'}</Text>
         <Text style={styles.subtitleText}>{'The hottest talent outside of pro sports!'}</Text>
       </View>
       <View style={styles.userDetailscontainer}>
         <TextInput
-            style={[ styles.input, {borderColor : props.t1Color} ]}
+            style={styles.input}
             placeholder={'Email'}
             onChangeText={(text) => { props.onChangeFirstText(text); }}
             value={props.username}
@@ -35,7 +35,7 @@ const SignUp = props => (
             underlineColorAndroid="transparent"
         />
         <TextInput
-            style={[ styles.input, {borderColor : props.t2Color} ]}
+            style={styles.input}
             placeholder={'Password'}
             secureTextEntry={true}
             onChangeText={(text) => { props.onChangeSecondText(text); }}
@@ -46,7 +46,7 @@ const SignUp = props => (
             underlineColorAndroid="transparent"
         />
         <TextInput
-            style={[ styles.input, {borderColor : props.t3Color} ]}
+            style={styles.input}
             placeholder={'Confirm Password'}
             secureTextEntry={true}
             onChangeText={(text) => { props.onChangeThirdText(text); }}
@@ -57,7 +57,7 @@ const SignUp = props => (
             underlineColorAndroid="transparent"
         />
         <TouchableOpacity  onPress={() => { props.onSignUpButtonClick();  }}>
-          <View style={{marginTop: 5, height: 40, width: width-44, backgroundColor: 'rgb(251,0,7)' ,alignItems: 'center', justifyContent: 'center'}}>
+          <View style={{   borderColor: 'grey',backgroundColor: 'red',borderRadius:15, borderWidth: 1, width: 150,height: 40, backgroundColor: 'white' ,alignItems: 'center', justifyContent: 'center'}}>
             <Text style={styles.loginButtonText}>
               {'Sign Up'}
             </Text>
@@ -96,8 +96,8 @@ const styles = StyleSheet.create({
     width: width - 40,
     height: 40,
     backgroundColor: 'white',
-    borderColor: 'red',
-    borderWidth: 2,
+    borderColor: 'black',
+    borderBottomWidth: 2,
     padding: 3,
     marginBottom: 10,
   },
@@ -106,6 +106,7 @@ const styles = StyleSheet.create({
     width,
     alignItems: 'center',
     justifyContent: 'flex-end',
+    backgroundColor: 'white'
   },
   userDetailscontainer: {
     flex:1,
@@ -118,7 +119,8 @@ const styles = StyleSheet.create({
   },
   loginButtonText: {
     textAlign: 'center',
-    color: 'white',
+    color: 'grey',
+ 
     fontSize: 13,
     fontWeight: '800',
   },
@@ -132,7 +134,7 @@ const styles = StyleSheet.create({
   welcomeText: {
     textAlign: 'center',
     width,
-    color: 'white',
+    color: 'black',
     fontSize: 25,
     padding: 10,
     fontWeight: '700',

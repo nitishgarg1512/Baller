@@ -39,6 +39,13 @@ const FindTeam = props => (
               value={props.teamName}
               underlineColorAndroid="black"
           />
+      <TextInput
+              style={ styles.input }
+              placeholder={'Type your team\'s name here'}
+              onChangeText={(text) => { props.onChangeTeamName(text); }}
+              value={props.teamName}
+              underlineColorAndroid="black"
+          />
     </View>
     <View style={{width, height: 200}}>
       <FlatList
@@ -102,7 +109,7 @@ const styles = StyleSheet.create({
     height: 40,
     backgroundColor: 'white',
     borderBottomColor: 'black',
-    borderBottomWidth: 1,
+    borderBottomWidth: 2,
     padding: 3,
     marginBottom: 10,
   },

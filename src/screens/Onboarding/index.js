@@ -60,7 +60,7 @@ export default class Onboarding extends Component {
 
   skipInformation() {
     const { navigate } = this.props.navigation;
-    navigate({ routeName: 'Login' })
+    navigate({ routeName: 'Landing' })
     // const resetAction = NavigationActions.reset({
     //   index: 0,
     //   actions: [
